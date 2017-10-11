@@ -39,7 +39,7 @@ See [`examples/worker.rs`](examples/worker.rs) for a working example.
 Run it with `cargo run --example worker`.
 
 ```rust
-#[derive(RustcDecodable, RustcEncodable)]
+#[derive(Deserialize, Serialize)]
 struct Job { id: u64 }
 
 let client = redis::Client::open("redis://127.0.0.1/").unwrap();
@@ -55,7 +55,7 @@ See [`examples/worker.rs`](examples/worker.rs) for a working example.
 Run it with `cargo run --example worker`.
 
 ```rust
-#[derive(RustcDecodable, RustcEncodable)]
+#[derive(Deserialize, Serialize)]
 struct Job { id: u64 }
 
 let client = redis::Client::open("redis://127.0.0.1/").unwrap();
